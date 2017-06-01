@@ -109,29 +109,57 @@ SpaceFilling <-function(asch){
 
 #### SI RightAng
 if (asch == "RightAng"){
-V<-fun2();n<-V[1];l<-V[2];w<-V[3];s<-l*n;A<-NULL;S<-l*n*w
-SF<-matrix(ncol=S,nrow=S)
-for (i in 1:w){
-A[[i]]<-matrix(1:s, ncol=l, byrow=TRUE)
-z<-(i-1)*s
-A[[i]]<-A[[i]]+z};B<-Reduce("rbind",A)
-for (i in 1:w) {
-a<-A[[i]];mi<-min(a);ma<-max(a)
-for (d in mi:ma){
-for (dd in mi:ma){
-D<-which(a==d); d1<-D%%n ; if (d1==0){d1<-n}
-DD<-which(a==dd); d2<-DD%%n ; if (d2==0){d2<-n}
-if (d1==d2) {SF[d,dd]<-1;SF[dd,d]<-1}
-else {SF[d,dd]<-2;SF[dd,d]<-2}}
-for (i in 1:w) {
-if (i < w){
-b<-A[[i+1]];mib<-min(b);mab<-max(b)
-for (db in mib:mab){
-DB<-which(b==db); db2<-DB%%n ; if (db2==0){db2<-n}
-if (d1==db2) {if (is.na(SF[d,db])==TRUE){
-SF[d,db]<-3;SF[db,d]<-3}}
-else {if (is.na(SF[d,db])==TRUE){
-SF[d,db]<-4;SF[db,d]<-4}}}}}}}}
+  V<-fun2()
+  n<-V[1]
+  l<-V[2]
+  w<-V[3]
+  s<-l*n
+  A<-NULL
+  S<-l*n*w
+  SF<-matrix(ncol=S,nrow=S)
+  for (i in 1:w){
+    A[[i]]<-matrix(1:s, ncol=l, byrow=TRUE)
+    z<-(i-1)*s
+    A[[i]]<-A[[i]]+z
+    }
+  B<-Reduce("rbind",A)
+  for (i in 1:w) {
+    a<-A[[i]]
+    mi<-min(a)
+    ma<-max(a)
+    for (d in mi:ma){
+      for (dd in mi:ma){
+        D<-which(a==d); d1<-D%%n ; if (d1==0){d1<-n}
+        DD<-which(a==dd) 
+        d2<-DD%%n 
+        if (d2==0){d2<-n}
+        if (d1==d2) {SF[d,dd]<-1
+        SF[dd,d]<-1}
+        else {SF[d,dd]<-2
+        SF[dd,d]<-2
+        }
+      }
+    for (i in 1:w) {
+      if (i < w){
+      b<-A[[i+1]]
+      mib<-min(b)
+      mab<-max(b)
+      for (db in mib:mab){
+        DB<-which(b==db)
+        db2<-DB%%n
+        if (db2==0){db2<-n}
+        if (d1==db2) {if (is.na(SF[d,db])==TRUE){
+        SF[d,db]<-3;SF[db,d]<-3
+        }
+      }
+    else {if (is.na(SF[d,db])==TRUE){
+      SF[d,db]<-4;SF[db,d]<-4}}
+      }     
+     }
+    }
+   }
+  }
+ }
 
 
 #### SI GrectRightAng4 
