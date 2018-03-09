@@ -14,3 +14,5 @@ Description: Using some association schemes to obtain a new series of resolvable
 URL: www.sites.google.com/site/mohamedlaibwebpage
 
 License: GPL-3
+
+[![Downloads from the RStudio CRAN mirror](http://cranlogs.r-pkg.org/badges/grand-total/RPPairwiseDesign)](http://cran.rstudio.com/package=RPPairwiseDesign)
