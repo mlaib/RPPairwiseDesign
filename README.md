@@ -11,7 +11,7 @@ Author: Mohamed Laib, Imane Rezgui and Zebida Gheribi-Aoulmi
 
 Description: Using some association schemes to obtain a new series of resolvable partially pairwise balanced designs (RPPBD) and space-filling designs.
 
-URL: www.sites.google.com/site/mohamedlaibwebpage
+URL: https://mlaib.github.io/
 
 License: GPL-3
 
