@@ -3,9 +3,9 @@ R package
 
 Title: Resolvable partially pairwise balanced design and Space-filling design via association scheme.
 
-Version: 1.0
+Version: 1.1
 
-Date: 2015-01-19
+Date: 2025-05-27
 
 Author: Mohamed Laib, Imane Rezgui and Zebida Gheribi-Aoulmi
 

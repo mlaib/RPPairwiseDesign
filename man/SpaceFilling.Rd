@@ -48,7 +48,4 @@ Mohamed Laib, Imane Rezgui and Zoubida Gheribi-Aoulmi
 #### Space Filling obtain via Group divisible association scheme.
 # SpaceFilling("PPdiv")
 }
-% Add one or more standard keywords, see file 'KEYWORDS' in the
-% R documentation directory.
-\keyword{ ~kwd1 }
-\keyword{ ~kwd2 }% __ONLY ONE__ keyword per line
+
